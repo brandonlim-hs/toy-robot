@@ -6,7 +6,7 @@ namespace ToyRobot\Coordinate;
  * Class Coordinate2D represents a 2D position (X,Y) on a given space.
  * @package ToyRobot\Coordinate
  */
-class Coordinate2D implements CoordinateXInterface, CoordinateYInterface
+class Coordinate2D implements Coordinate2DInterface
 {
     /**
      * @var int $x The x coordinate.
