@@ -18,34 +18,34 @@ class SquareTableTest extends TestCase
     {
         return [
             'withinBoundary1' => [
-                5,
-                new Coordinate2D(0, 0),
-                true,
+                'dimension' => 5,
+                'coordinate2D' => new Coordinate2D(0, 0),
+                'expectedResult' => true,
             ],
             'withinBoundary2' => [
-                5,
-                new Coordinate2D(4, 4),
-                true,
+                'dimension' => 5,
+                'coordinate2D' => new Coordinate2D(4, 4),
+                'expectedResult' => true,
             ],
             'outsideBoundary1' => [
-                5,
-                new Coordinate2D(-1, 0),
-                false,
+                'dimension' => 5,
+                'coordinate2D' => new Coordinate2D(-1, 0),
+                'expectedResult' => false,
             ],
             'outsideBoundary2' => [
-                5,
-                new Coordinate2D(0, -1),
-                false,
+                'dimension' => 5,
+                'coordinate2D' => new Coordinate2D(0, -1),
+                'expectedResult' => false,
             ],
             'outsideBoundary3' => [
-                5,
-                new Coordinate2D(5, 4),
-                false,
+                'dimension' => 5,
+                'coordinate2D' => new Coordinate2D(5, 4),
+                'expectedResult' => false,
             ],
             'outsideBoundary4' => [
-                5,
-                new Coordinate2D(4, 5),
-                false,
+                'dimension' => 5,
+                'coordinate2D' => new Coordinate2D(4, 5),
+                'expectedResult' => false,
             ],
         ];
     }
