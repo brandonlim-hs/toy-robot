@@ -32,24 +32,24 @@ class SimpleFaceTest extends TestCase
     {
         return [
             'positive90degreesShouldRotateClockwiseOnce' => [
-                90,
-                DirectionNSEW::NORTH(),
-                DirectionNSEW::EAST(),
+                'degrees' => 90,
+                'initialDirection' => DirectionNSEW::NORTH(),
+                'expectedDirection' => DirectionNSEW::EAST(),
             ],
             'almost90DegreesShouldNotChangeDirection' => [
-                89,
-                DirectionNSEW::NORTH(),
-                DirectionNSEW::NORTH(),
+                'degrees' => 89,
+                'initialDirection' => DirectionNSEW::NORTH(),
+                'expectedDirection' => DirectionNSEW::NORTH(),
             ],
             'negative90degreesShouldRotateAntiClockwiseOnce' => [
-                -90,
-                DirectionNSEW::NORTH(),
-                DirectionNSEW::WEST(),
+                'degrees' => -90,
+                'initialDirection' => DirectionNSEW::NORTH(),
+                'expectedDirection' => DirectionNSEW::WEST(),
             ],
             'moreThan90degreesShouldRotateManyTimes' => [
-                540,
-                DirectionNSEW::NORTH(),
-                DirectionNSEW::SOUTH(),
+                'degrees' => 540,
+                'initialDirection' => DirectionNSEW::NORTH(),
+                'expectedDirection' => DirectionNSEW::SOUTH(),
             ],
         ];
     }
