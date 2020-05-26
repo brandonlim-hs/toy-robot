@@ -16,12 +16,13 @@ class SquareTable implements FieldBoundaryInterface
     private $dimension;
 
     /**
-     * Create a square table with given dimension.
+     * Create a square table with given dimension. The dimension is converted to absolute value since dimension must be
+     * positive.
      * @param int $dimension The dimension units.
      */
     public function __construct($dimension)
     {
-        $this->dimension = $dimension;
+        $this->dimension = abs($dimension);
     }
 
     /**

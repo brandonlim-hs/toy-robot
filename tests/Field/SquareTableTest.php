@@ -10,6 +10,37 @@ use ToyRobot\Field\SquareTable;
 class SquareTableTest extends TestCase
 {
     /**
+     * Return a data provider array of expected dimension results.
+     *
+     * @return array Return a data provider array of expected dimension results.
+     */
+    public function expectedDimensionResults()
+    {
+        return [
+            'positiveDimension' => [
+                'givenDimension' => 5,
+                'expectedDimension' => 5,
+            ],
+            'negativeDimension' => [
+                'givenDimension' => -5,
+                'expectedDimension' => 5,
+            ],
+        ];
+    }
+
+    /**
+     * @dataProvider expectedDimensionResults
+     * @param int $givenDimension The dimension units.
+     * @param int $expectedDimension The dimension units.
+     */
+    public function testCreateTable(int $givenDimension, int $expectedDimension)
+    {
+        $squareTable = new SquareTable($givenDimension);
+        $this->assertEquals($expectedDimension, $squareTable->getXDimension());
+        $this->assertEquals($expectedDimension, $squareTable->getYDimension());
+    }
+
+    /**
      * Return a data provider array of expected within boundary results.
      *
      * @return array Return a data provider array of expected within boundary results.
